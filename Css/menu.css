@@ -1,0 +1,90 @@
+/* Mini navegador del menú */
+.menu-nav {
+  margin-bottom: 20px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.menu-nav ul li a {
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.menu-nav ul li a:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+/* Menu Sección */
+.menu-section {
+  margin: 20px 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.product-image {
+  width: 100px;
+  height: auto;
+  margin: 0 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.product-info {
+  flex: 1;
+  margin: 10px;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+}
+
+.product-info h3 {
+  margin: 5px 0;
+  font-size: 1.5em;
+  color: #e67e22;
+}
+
+.product-info p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Añadir estilos para categorías */
+.category {
+  margin-top: 30px;
+  font-size: 1.8em;
+  color: #333;
+  border-bottom: 2px solid #e67e22;
+  padding-bottom: 5px;
+}

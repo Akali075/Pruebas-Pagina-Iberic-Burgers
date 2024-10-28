@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebidas - Iberic Burgers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/bebidas.css">
+    <script>
+        function changeLanguage(lang) {
+          document.documentElement.lang = lang;
+          document.querySelectorAll(".lang").forEach((el) => {
+            el.style.display = el.classList.contains(lang) ? "block" : "none";
+          });
+        }
+      </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.png" alt="Iberic Burgers Logo" class="logo" />
+            <ul>
+                <li><a href="index.html" class="lang es">Inicio</a><a href="index.html" class="lang en"
+                        style="display: none;">Home</a></li>
+                <li><a href="menu.html" class="lang es">Menú</a><a href="menu.html" class="lang en"
+                        style="display: none;">Menu</a></li>
+                <li><a href="bebidas.html" class="lang es">Bebidas</a><a href="bebidas.html" class="lang en"
+                        style="display: none;">Drinks</a></li>
+                <li><a href="contacto.html" class="lang es">Contacto y Reservas</a><a href="contacto.html"
+                        class="lang en" style="display: none;">Contact & Reservations</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button onclick="changeLanguage('es')">ES</button>
+            <button onclick="changeLanguage('en')">EN</button>
+        </div>
+    </header>
+
+    <!-- Mini navegador para las categorías del menú -->
+    <nav class="menu-nav">
+        <ul>
+            <li>
+                <a href="#Refresco" class="lang es">Refrescos</a><a href="#Refresco" class="lang en"
+                    style="display: none">Sodas</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="#Cervezas" class="lang es">Cervezas</a><a href="#Cervezas" class="lang en"
+                    style="display: none">Beer</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="#Vinos" class="lang es">Vinos</a><a href="#Vinos" class="lang en"
+                    style="display: none">Cames</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="#Zumos" class="lang es">Zumos</a><a href="#Zumos" class="lang en"
+                    style="display: none">Juices</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Bebidas -->
+    <section id="drinks">
+        <h2>Bebidas</h2>
+
+        <!-- Sección de Refrescos -->
+        <div id="Refresco" class="category">
+            <h3>Refrescos</h3>
+            <div class="drinks-grid">
+                <div class="drink-item">
+                    <img src="images/bebidas/cocacola.png" alt="Coca-Cola" class="drink-image" />
+                    <h4 class="lang es">Coca-Cola</h4>
+                    <h4 class="lang en" style="display: none;">Coca-Cola</h4>
+                    <p class="lang es">Refresco clásico.</p>
+                    <p class="lang en" style="display: none;">Classic soda.</p>
+                </div>
+                <div class="drink-item">
+                    <img src="images/bebidas/fanta.png" alt="Fanta" class="drink-image" />
+                    <h4 class="lang es">Fanta</h4>
+                    <h4 class="lang en" style="display: none;">Fanta</h4>
+                    <p class="lang es">Refresco de naranja.</p>
+                    <p class="lang en" style="display: none;">Orange soda.</p>
+                </div>
+                <div class="drink-item">
+                    <img src="images/bebidas/sprite.webp" alt="Sprite" class="drink-image" />
+                    <h4 class="lang es">Sprite</h4>
+                    <h4 class="lang en" style="display: none;">Sprite</h4>
+                    <p class="lang es">Refresco de limón.</p>
+                    <p class="lang en" style="display: none;">Lemon soda.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Cervezas -->
+        <div id="Cervezas" class="category">
+            <h3>Cervezas</h3>
+            <div class="drinks-grid">
+                <div class="drink-item">
+                    <img src="images/bebidas/heineken.png" alt="Cerveza Artesanal" class="drink-image" />
+                    <h4 class="lang es">Heineken</h4>
+                    <h4 class="lang en" style="display: none;">Heineken</h4>
+                    <p class="lang es">Cervezas elaboradas con ingredientes naturales.</p>
+                    <p class="lang en" style="display: none;">Beers made with natural ingredients.</p>
+                </div>
+                <div class="drink-item">
+                    <img src="images/bebidas/estrellagalicia.png" alt="Cerveza Clásica" class="drink-image" />
+                    <h4 class="lang es">Estrella Galicia</h4>
+                    <h4 class="lang en" style="display: none;">Estrella Galicia</h4>
+                    <p class="lang es">Las mejores cervezas clásicas.</p>
+                    <p class="lang en" style="display: none;">The best classic beers.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Vinos -->
+        <div id="Vinos" class="category">
+            <h3>Vinos</h3>
+            <div class="drinks-grid">
+                <div class="drink-item">
+                    <img src="images/vino_tinto.png" alt="Vino Tinto" class="drink-image" />
+                    <h4 class="lang es">Vino Tinto</h4>
+                    <h4 class="lang en" style="display: none;">Red Wine</h4>
+                    <p class="lang es">Seleccionado de viñedos locales.</p>
+                    <p class="lang en" style="display: none;">Selected from local vineyards.</p>
+                </div>
+                <div class="drink-item">
+                    <img src="images/vino_blanco.png" alt="Vino Blanco" class="drink-image" />
+                    <h4 class="lang es">Vino Blanco</h4>
+                    <h4 class="lang en" style="display: none;">White Wine</h4>
+                    <p class="lang es">Delicioso vino blanco fresco.</p>
+                    <p class="lang en" style="display: none;">Delicious fresh white wine.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección de Zumos -->
+        <div id="Zumos" class="category">
+            <h3>Zumos</h3>
+            <div class="drinks-grid">
+                <div class="drink-item">
+                    <img src="images/zumo_naranja.png" alt="Zumo de Naranja" class="drink-image" />
+                    <h4 class="lang es">Zumo de Naranja</h4>
+                    <h4 class="lang en" style="display: none;">Orange Juice</h4>
+                    <p class="lang es">Natural y fresco.</p>
+                    <p class="lang en" style="display: none;">Natural and fresh.</p>
+                </div>
+                <div class="drink-item">
+                    <img src="images/zumo_manzana.png" alt="Zumo de Manzana" class="drink-image" />
+                    <h4 class="lang es">Zumo de Manzana</h4>
+                    <h4 class="lang en" style="display: none;">Apple Juice</h4>
+                    <p class="lang es">Hecho con manzanas frescas.</p>
+                    <p class="lang en" style="display: none;">Made with fresh apples.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!--Seccion De Pie De Pagina-->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2 class="lang es">Sobre Nosotros</h2>
+        <h2 class="lang en" style="display: none;">About Us</h2>
+        <p class="lang es">Ofrecemos las mejores hamburguesas de la ciudad, elaboradas con ingredientes frescos y
+          locales.</p>
+        <p class="lang en" style="display: none;">We offer the best burgers in town, made with fresh, local ingredients.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h2 class="lang es">Enlaces Rápidos</h2>
+        <h2 class="lang en" style="display: none;">Quick Links</h2>
+        <ul>
+          <li><a href="index.html" class="lang es">Inicio</a><a href="index.html" class="lang en"
+              style="display: none;">Home</a></li>
+          <li><a href="menu.html" class="lang es">Menú</a><a href="menu.html" class="lang en"
+              style="display: none;">Menu</a></li>
+          <li><a href="bebidas.html" class="lang es">Bebidas</a><a href="bebidas.html" class="lang en"
+              style="display: none;">Drinks</a></li>
+          <li><a href="contacto.html" class="lang es">Contacto</a><a href="contacto.html" class="lang en"
+              style="display: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2 class="lang es">Contáctanos</h2>
+        <h2 class="lang en" style="display: none;">Contact Us</h2>
+        <p class="lang es">Email: info@ibericburgers.com</p>
+        <p class="lang en" style="display: none;">Email: info@ibericburgers.com</p>
+        <p class="lang es">Teléfono: 123-456-789</p>
+        <p class="lang en" style="display: none;">Phone: 123-456-789</p>
+        <div class="social">
+          <span class="lang es">Síguenos:</span><span class="lang en" style="display: none;">Follow us:</span>
+          <div class="social-icons">
+            <a href="#"><img src="images/footer/facebook_icon.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/footer/instagram_icon.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/footer/twitter_icon.png" alt="Twitter" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom" class="lang es">
+      <p>&copy; 2024 Iberic Burgers. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

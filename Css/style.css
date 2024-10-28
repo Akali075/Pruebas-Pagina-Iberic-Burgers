@@ -1,0 +1,459 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+}
+
+#content {
+  margin: 20px;
+  padding: 20px;
+}
+
+section {
+  margin: 20px 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Flex para juntar menú y botones de idioma */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* Logo alineado a la izquierda */
+.logo {
+  width: 100px;
+  height: auto;
+  margin-right: auto;
+}
+
+/* Menú de navegación horizontal */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  transition: 0.4s;
+  padding: 8px 12px;
+}
+
+/* Botones de cambio de idioma */
+header div {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+header div button {
+  background-color: #555;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+header div button:hover {
+  background-color: #777;
+}
+
+/* Efectos de hover en el menú */
+nav ul li a:hover {
+  border-bottom: 2px solid white;
+}
+
+#hero {
+  background: url("/images/hamburguesa.jpg") no-repeat center center/cover;
+  color: #000000;
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* Sección de los botones principales */
+#main-buttons {
+  text-align: center;
+  margin: 40px 0; 
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.main-btn {
+  background-color: #e67e22;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; 
+}
+
+.main-btn:hover {
+  background-color: #d35400; 
+}
+
+/* Estilos de la Galería de Imágenes */
+#image-gallery {
+  text-align: center; 
+  margin: 40px auto;
+  padding-bottom: 40px; 
+}
+
+#image-gallery h2 {
+  font-size: 32px; 
+  font-family: 'Dancing Script', cursive;
+  margin-bottom: 20px; 
+  font-weight: bold; 
+}
+
+.image-container {
+  display: flex; 
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.image-column {
+  flex: 1;
+  margin: 0 10px; 
+  max-width: 300px;
+  position: relative;
+}
+
+.flip-card {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out; 
+}
+
+.image-column:hover .flip-card {
+  transform: rotateX(15deg) scale(1.1); 
+}
+
+.flip-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.flip-card .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.image-column:hover .back {
+  opacity: 1; 
+}
+
+.image-column:hover .front {
+  opacity: 0; 
+}
+
+.image-column a {
+  display: block;
+  text-decoration: none;
+}
+
+.image-column img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(0);
+  }
+  34% {
+    transform: translateX(-100%);
+  }
+  67% {
+    transform: translateX(-100%);
+  }
+  68% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* Estilos de la sección de contacto */
+.contact-container {
+  display: flex; /* Utiliza flexbox para alinear los elementos en filas */
+  justify-content: space-between; /* Espacio entre mapa y formulario */
+  margin: 20px auto; /* Centrar el contenedor */
+  max-width: 1200px; /* Limitar el ancho máximo del contenedor */
+}
+
+/* Estilos del mapa */
+#map {
+  flex: 1; /* Permitir que el mapa use el espacio disponible */
+  margin-right: 20px; /* Espacio a la derecha del mapa */
+}
+
+.reservation-form {
+  flex: 1; /* Permitir que el formulario use el espacio disponible */
+  background-color: #fff; /* Fondo blanco para el formulario */
+  padding: 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Otras reglas de estilo del formulario */
+form input,
+form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #e67e22;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.category {
+  margin: 20px;
+}
+
+.item img {
+  width: 100%;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.item p {
+  text-align: center;
+}
+
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background: #e67e22;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+form button {
+  background: #d35400;
+}
+
+/* Mini navegador del menú */
+.menu-nav ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.menu-nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.menu-nav ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.menu-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.menu-nav ul li:nth-child(odd) {
+  margin-right: 10px;
+}
+
+.menu-nav ul li:nth-child(even) {
+  font-weight: bold;
+  color: #000; /* Color de las barras */
+  vertical-align: middle;
+}
+
+/* Menu Seccion */
+.menu-section {
+  margin: 20px 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.product-image {
+  width: 100px;
+  height: auto;
+  margin: 0 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.left {
+  flex-direction: row;
+}
+
+.right {
+  flex-direction: row-reverse;
+}
+
+
+/*Footer*/
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.footer-section h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #e67e22; /* Color destacado */
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+.footer-section .social {
+  display: flex; /* Utiliza flex para alinear íconos */
+  align-items: center; /* Centra verticalmente */
+}
+
+.footer-section .social span {
+  margin-right: 10px; /* Espacio entre el texto y los íconos */
+}
+
+.footer-section .social-icons {
+  display: flex;
+  align-items: center; /* Centra verticalmente los íconos */
+}
+
+.footer-section .social-icons a {
+  margin-right: 10px; /* Espacio entre íconos */
+}
+
+.footer-section .social-icons img {
+  width: 24px; /* Ajusta el tamaño a 24px */
+  height: 24px; /* Mantiene la proporción */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #444; /* Línea superior para separar */
+}
+
+.footer-bottom p {
+  margin: 0;
+}

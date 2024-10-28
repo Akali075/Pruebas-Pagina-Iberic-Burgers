@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menú - Iberic Burgers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Css/style.css" />
+  <link rel="stylesheet" href="Css/menu.css" />
+  <script>
+    function changeLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll(".lang").forEach((el) => {
+        el.style.display = el.classList.contains(lang) ? "block" : "none";
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="Iberic Burgers Logo" class="logo" />
+      <ul>
+        <li><a href="index.html" class="lang es">Inicio</a><a href="index.html" class="lang en"
+            style="display: none;">Home</a></li>
+        <li><a href="menu.html" class="lang es">Menú</a><a href="menu.html" class="lang en"
+            style="display: none;">Menu</a></li>
+        <li><a href="bebidas.html" class="lang es">Bebidas</a><a href="bebidas.html" class="lang en"
+            style="display: none;">Drinks</a></li>
+        <li><a href="contacto.html" class="lang es">Contacto y Reservas</a><a href="contacto.html" class="lang en"
+            style="display: none;">Contact & Reservations</a></li>
+      </ul>
+    </nav>
+    <div>
+      <button onclick="changeLanguage('es')">ES</button>
+      <button onclick="changeLanguage('en')">EN</button>
+    </div>
+  </header>
+
+  <!-- Mini navegador para las categorías del menú -->
+  <nav class="menu-nav">
+    <ul>
+      <li>
+        <a href="#tapas" class="lang es">Para Picar</a><a href="#tapas" class="lang en" style="display: none">To
+          Snack</a>
+      </li>
+      <li>|</li>
+      <li>
+        <a href="#burgers" class="lang es">Hamburguesas</a><a href="#burgers" class="lang en"
+          style="display: none">Burgers</a>
+      </li>
+      <li>|</li>
+      <li>
+        <a href="#sandwiches" class="lang es">Bocadillos y Sándwiches</a><a href="#sandwiches" class="lang en"
+          style="display: none">Sandwiches</a>
+      </li>
+      <li>|</li>
+      <li>
+        <a href="#desserts" class="lang es">Postres</a><a href="#desserts" class="lang en"
+          style="display: none">Desserts</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="tapas" class="menu-section left">
+    <h2 class="lang es">Para Picar</h2>
+    <h2 class="lang en" style="display: none;">To Snack</h2>
+    <div class="menu-item">
+      <img src="images/menu/aceitunas.png" alt="Aceitunas Maridaje" class="product-image" />
+      <div class="product-info">
+        <h3 class="lang es">Aceitunas Maridaje</h3>
+        <h3 class="lang en" style="display: none;">Marinade Olives</h3>
+        <p class="lang es">Aceitunas verdes y negras con hierbas de la tierra.</p>
+        <p class="lang en" style="display: none;">Green and black olives with herbs from the land.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/tortilla.png" alt="Tortilla Española" class="product-image" />
+      <div class="product-info">
+        <h3 class="lang es">Tortilla De Patatas</h3>
+        <h3 class="lang en" style="display: none;">Spanish Omelette</h3>
+        <p class="lang es">Clásica tortilla de patatas.</p>
+        <p class="lang en" style="display: none;">Classic Spanish omelette.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/croquetas.png" alt="Croquetas Ibéricas" class="product-image" />
+      <div class="product-info">
+        <h3 class="lang es">Croquetas Ibéricas</h3>
+        <h3 class="lang en" style="display: none;">Iberian Croquettes</h3>
+        <p class="lang es">Croquetas de jamón ibérico con alioli.</p>
+        <p class="lang en" style="display: none;">Iberian ham croquettes with alioli.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/quesos.png" alt="Tabla de Quesos" class="product-image" />
+      <div class="product-info">
+        <h3 class="lang es">Tabla de Quesos</h3>
+        <h3 class="lang en" style="display: none;">Cheese Board</h3>
+        <p class="lang es">Selección de quesos curados de la sierra con membrillo.</p>
+        <p class="lang en" style="display: none;">Selection of cured cheeses from the mountains with quince.</p>
+      </div>
+    </div>
+    <div class="menu-item">
+      <img src="images/menu/bravas.png" alt="Patatas Bravas" class="product-image" />
+      <div class="product-info">
+        <h3 class="lang es">Patatas Bravas</h3>
+        <h3 class="lang en" style="display: none;">Spicy Potatoes</h3>
+        <p class="lang es">Crujientes patatas con salsa brava y mayonesa.</p>
+        <p class="lang en" style="display: none;">Crispy potatoes with spicy sauce and mayonnaise.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="burgers" class="menu-section right">
+    <h2 class="lang es">Hamburguesas</h2>
+    <h2 class="lang en" style="display: none;">Burgers</h2>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">La Ibérica</h3>
+        <h3 class="lang en" style="display: none;">The Iberian</h3>
+        <p class="lang es">
+          Hamburguesa de ternera con jamón ibérico, queso manchego y salsa de
+          tomate casera.
+        </p>
+        <p class="lang en" style="display: none;">
+          Beef burger with Iberian ham, Manchego cheese, and homemade tomato sauce.
+        </p>
+      </div>
+      <img src="images/menu/laiberica.png" alt="Hamburguesa Ibérica" class="product-image" />
+    </div>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Hamburguesa de Chorizo</h3>
+        <h3 class="lang en" style="display: none;">Chorizo Burger</h3>
+        <p class="lang es">
+          Jugosa hamburguesa de ternera con rodajas de chorizo ibérico, queso
+          de cabra y pimientos asados.
+        </p>
+        <p class="lang en" style="display: none;">
+          Juicy beef burger with slices of Iberian chorizo, goat cheese, and roasted peppers.
+        </p>
+      </div>
+      <img src="images/menu/lachorizo.png" alt="Hamburguesa de Chorizo" class="product-image" />
+    </div>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Veggie con Sabor</h3>
+        <h3 class="lang en" style="display: none;">Flavorful Veggie</h3>
+        <p class="lang es">
+          Hamburguesa de garbanzos y espinacas con aguacate y salsa de yogur.
+        </p>
+        <p class="lang en" style="display: none;">
+          Chickpea and spinach burger with avocado and yogurt sauce.
+        </p>
+      </div>
+      <img src="images/menu/veggieconsabor.png" alt="Hamburguesa Veggie" class="product-image" />
+    </div>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Ternura de Cordero</h3>
+        <h3 class="lang en" style="display: none;">Lamb Tenderness</h3>
+        <p class="lang es">Hamburguesa de cordero especiado con salsa de yogur y menta.</p>
+        <p class="lang en" style="display: none;">Spiced lamb burger with yogurt and mint sauce.</p>
+      </div>
+      <img src="images/menu/ternera.png" alt="Hamburguesa de Cordero" class="product-image" />
+    </div>
+  </section>
+
+  <section id="sandwiches" class="menu-section left">
+    <h2 class="lang es">Bocadillos y Sándwiches</h2>
+    <h2 class="lang en" style="display: none;">Sandwiches</h2>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Bocadillo de Jamón</h3>
+        <h3 class="lang en" style="display: none;">Ham Sandwich</h3>
+        <p class="lang es">
+          Bocadillo con jamón ibérico, tomate y aceite de oliva.
+        </p>
+        <p class="lang en" style="display: none;">
+          Sandwich with Iberian ham, tomato, and olive oil.
+        </p>
+      </div>
+      <img src="images/menu/bocadillodejamon.png" alt="Bocadillo de Jamón" class="product-image" />
+    </div>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Sándwich de Pollo</h3>
+        <h3 class="lang en" style="display: none;">Chicken Sandwich</h3>
+        <p class="lang es">
+          Sándwich con pechuga de pollo, lechuga, tomate y mayonesa.
+        </p>
+        <p class="lang en" style="display: none;">
+          Sandwich with chicken breast, lettuce, tomato, and mayonnaise.
+        </p>
+      </div>
+      <img src="images/menu/bocadillopechuga.png" alt="Sándwich de Pollo" class="product-image" />
+    </div>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Bocadillo Vegetal</h3>
+        <h3 class="lang en" style="display: none;">Vegetable Sandwich</h3>
+        <p class="lang es">Bocadillo con verduras asadas y hummus.</p>
+        <p class="lang en" style="display: none;">Sandwich with roasted vegetables and hummus.</p>
+      </div>
+      <img src="images/menu/AtunYPimientos.png" alt="Bocadillo Vegetal" class="product-image" />
+    </div>
+  </section>
+
+  <section id="desserts" class="menu-section right">
+    <h2 class="lang es">Postres</h2>
+    <h2 class="lang en" style="display: none;">Desserts</h2>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Flan Casero</h3>
+        <h3 class="lang en" style="display: none;">Homemade Flan</h3>
+        <p class="lang es">Clásico flan de huevo.</p>
+        <p class="lang en" style="display: none;">Classic egg flan.</p>
+      </div>
+      <img src="images/menu/flancasero.png" alt="Flan Casero" class="product-image" />
+    </div>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Tarta de Queso</h3>
+        <h3 class="lang en" style="display: none;">Cheese Cake</h3>
+        <p class="lang es">
+          Tarta tradicional de queso.
+        </p>
+        <p class="lang en" style="display: none;">
+          Traditional almond cheese cake.
+        </p>
+      </div>
+      <img src="images/menu/tartadequeso.png" alt="Tarta de Santiago" class="product-image" />
+    </div>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Churros con Chocolate</h3>
+        <h3 class="lang en" style="display: none;">Churros with Chocolate</h3>
+        <p class="lang es">Churros crujientes con chocolate caliente.</p>
+        <p class="lang en" style="display: none;">Crispy churros with hot chocolate.</p>
+      </div>
+      <img src="images/menu/churros.png" alt="Churros con Chocolate" class="product-image" />
+    </div>
+    <div class="menu-item">
+      <div class="product-info">
+        <h3 class="lang es">Helado Artesanal</h3>
+        <h3 class="lang en" style="display: none;">Artisan Ice Cream</h3>
+        <p class="lang es">Helado casero de varios sabores.</p>
+        <p class="lang en" style="display: none;">Homemade ice cream of various flavors.</p>
+      </div>
+      <img src="images/menu/helados.png" alt="Helado Artesanal" class="product-image" />
+    </div>
+  </section>
+
+  <!--Seccion De Pie De Pagina-->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2 class="lang es">Sobre Nosotros</h2>
+        <h2 class="lang en" style="display: none;">About Us</h2>
+        <p class="lang es">Ofrecemos las mejores hamburguesas de la ciudad, elaboradas con ingredientes frescos y
+          locales.</p>
+        <p class="lang en" style="display: none;">We offer the best burgers in town, made with fresh, local ingredients.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h2 class="lang es">Enlaces Rápidos</h2>
+        <h2 class="lang en" style="display: none;">Quick Links</h2>
+        <ul>
+          <li><a href="index.html" class="lang es">Inicio</a><a href="index.html" class="lang en"
+              style="display: none;">Home</a></li>
+          <li><a href="menu.html" class="lang es">Menú</a><a href="menu.html" class="lang en"
+              style="display: none;">Menu</a></li>
+          <li><a href="bebidas.html" class="lang es">Bebidas</a><a href="bebidas.html" class="lang en"
+              style="display: none;">Drinks</a></li>
+          <li><a href="contacto.html" class="lang es">Contacto</a><a href="contacto.html" class="lang en"
+              style="display: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2 class="lang es">Contáctanos</h2>
+        <h2 class="lang en" style="display: none;">Contact Us</h2>
+        <p class="lang es">Email: info@ibericburgers.com</p>
+        <p class="lang en" style="display: none;">Email: info@ibericburgers.com</p>
+        <p class="lang es">Teléfono: 123-456-789</p>
+        <p class="lang en" style="display: none;">Phone: 123-456-789</p>
+        <div class="social">
+          <span class="lang es">Síguenos:</span><span class="lang en" style="display: none;">Follow us:</span>
+          <div class="social-icons">
+            <a href="#"><img src="images/footer/facebook_icon.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/footer/instagram_icon.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/footer/twitter_icon.png" alt="Twitter" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom" class="lang es">
+      <p>&copy; 2024 Iberic Burgers. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

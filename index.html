@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iberic Burgers</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+  <link rel="stylesheet" href="Css/style.css" />
+  <script>
+    function changeLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll(".lang").forEach((el) => {
+        el.style.display = el.classList.contains(lang) ? "block" : "none";
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="Iberic Burgers Logo" class="logo" />
+      <ul>
+        <li><a href="index.html" class="lang es">Inicio</a><a href="index.html" class="lang en"
+            style="display: none;">Home</a></li>
+        <li><a href="menu.html" class="lang es">Menú</a><a href="menu.html" class="lang en"
+            style="display: none;">Menu</a></li>
+        <li><a href="bebidas.html" class="lang es">Bebidas</a><a href="bebidas.html" class="lang en"
+            style="display: none;">Drinks</a></li>
+        <li><a href="contacto.html" class="lang es">Contacto y Reservas</a><a href="contacto.html" class="lang en"
+            style="display: none;">Contact & Reservations</a></li>
+      </ul>
+    </nav>
+    <div>
+      <button onclick="changeLanguage('es')">ES</button>
+      <button onclick="changeLanguage('en')">EN</button>
+    </div>
+  </header>
+
+  <div id="content">
+    <!-- Sección de Portada -->
+    <section id="hero" class="lang es">
+      <h2>¡Bienvenidos a Iberic Burgers!</h2>
+      <p>
+        Disfruta de las mejores hamburguesas con un toque cultural de Aracena.
+      </p>
+      <section id="main-buttons">
+        <div class="button-container">
+          <a href="menu.html" class="main-btn">Menú</a>
+          <a href="reservas.html" class="main-btn">Reservas</a>
+          <a href="bebidas.html" class="main-btn">Bebidas</a>
+        </div>
+      </section>
+    </section>
+    <section id="hero" class="lang en" style="display: none">
+      <h2>Welcome to Iberic Burgers!</h2>
+      <p>Enjoy the best burgers with a cultural touch from Aracena.</p>
+      <section id="main-buttons">
+        <div class="button-container">
+          <a href="menu.html" class="main-btn">Menu</a>
+          <a href="reservas.html" class="main-btn">Reservations</a>
+          <a href="bebidas.html" class="main-btn">Drinks</a>
+        </div>
+      </section>
+    </section>
+
+    <!-- Sección de Imágenes -->
+    <section id="image-gallery">
+      <div class="lang es">
+        <h2>Nuestra Hamburguesas Con Toques De Aracena</h2>
+      </div>
+      <div class="lang en" style="display: none;">
+        <h2>Our Burgers With Aracena Flavour</h2>
+      </div>
+      <div class="image-container">
+        <div class="image-column">
+          <a href="menu.html">
+            <div class="flip-card">
+              <div class="front">
+                <img src="images/foto1.jpg" alt="Imagen original">
+              </div>
+              <div class="back">
+                <img src="images/menu/laiberica.jpeg" alt="Hamburguesa">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="image-column">
+          <a href="menu.html">
+            <div class="flip-card">
+              <div class="front">
+                <img src="images/foto2.jpg" alt="Otra imagen">
+              </div>
+              <div class="back">
+                <img src="images/hamburguesa - copia.jpeg" alt="Hamburguesa">
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="image-column">
+          <a href="menu.html">
+            <div class="flip-card">
+              <div class="front">
+                <img src="images/foto3.jpg" alt="Tercera imagen">
+              </div>
+              <div class="back">
+                <img src="images/menu/lachorizo.jpeg" alt="Hamburguesa">
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+  </div>
+  </section>
+
+  <!--Seccion De Pie De Pagina-->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2 class="lang es">Sobre Nosotros</h2>
+        <h2 class="lang en" style="display: none;">About Us</h2>
+        <p class="lang es">Ofrecemos las mejores hamburguesas de la ciudad, elaboradas con ingredientes frescos y
+          locales.</p>
+        <p class="lang en" style="display: none;">We offer the best burgers in town, made with fresh, local ingredients.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h2 class="lang es">Enlaces Rápidos</h2>
+        <h2 class="lang en" style="display: none;">Quick Links</h2>
+        <ul>
+          <li><a href="index.html" class="lang es">Inicio</a><a href="index.html" class="lang en"
+              style="display: none;">Home</a></li>
+          <li><a href="menu.html" class="lang es">Menú</a><a href="menu.html" class="lang en"
+              style="display: none;">Menu</a></li>
+          <li><a href="bebidas.html" class="lang es">Bebidas</a><a href="bebidas.html" class="lang en"
+              style="display: none;">Drinks</a></li>
+          <li><a href="contacto.html" class="lang es">Contacto</a><a href="contacto.html" class="lang en"
+              style="display: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2 class="lang es">Contáctanos</h2>
+        <h2 class="lang en" style="display: none;">Contact Us</h2>
+        <p class="lang es">Email: info@ibericburgers.com</p>
+        <p class="lang en" style="display: none;">Email: info@ibericburgers.com</p>
+        <p class="lang es">Teléfono: 123-456-789</p>
+        <p class="lang en" style="display: none;">Phone: 123-456-789</p>
+        <div class="social">
+          <span class="lang es">Síguenos:</span><span class="lang en" style="display: none;">Follow us:</span>
+          <div class="social-icons">
+            <a href="#"><img src="images/footer/facebook_icon.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/footer/instagram_icon.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/footer/twitter_icon.png" alt="Twitter" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom" class="lang es">
+      <p>&copy; 2024 Iberic Burgers. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

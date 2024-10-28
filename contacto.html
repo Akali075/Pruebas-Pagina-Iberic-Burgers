@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto y Reservas - Iberic Burgers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Css/style.css" />
+  <link rel="stylesheet" href="Css/contacto.css" />
+  <script>
+    function changeLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll(".lang").forEach((el) => {
+        el.style.display = el.classList.contains(lang) ? "block" : "none";
+      });
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img src="images/logo.png" alt="Iberic Burgers Logo" class="logo" />
+      <ul>
+        <li><a href="index.html" class="lang es">Inicio</a><a href="index.html" class="lang en"
+            style="display: none;">Home</a></li>
+        <li><a href="menu.html" class="lang es">Menú</a><a href="menu.html" class="lang en"
+            style="display: none;">Menu</a></li>
+        <li><a href="bebidas.html" class="lang es">Bebidas</a><a href="bebidas.html" class="lang en"
+            style="display: none;">Drinks</a></li>
+        <li><a href="contacto.html" class="lang es">Contacto y Reservas</a><a href="contacto.html" class="lang en"
+            style="display: none;">Contact & Reservations</a></li>
+      </ul>
+    </nav>
+    <div>
+      <button onclick="changeLanguage('es')">ES</button>
+      <button onclick="changeLanguage('en')">EN</button>
+    </div>
+  </header>
+
+  <!-- Sección de Contacto y Reservas -->
+  <section id="contact">
+    <h2>Contacto y Reservas</h2>
+    <p class="lang es">
+      Teléfono: +34 123 456 789 | Email: reservas@ibericburgers.com
+    </p>
+    <p class="lang en" style="display: none">
+      Phone: +34 123 456 789 | Email: reservas@ibericburgers.com
+    </p>
+
+    <div class="contact-container">
+      <!-- Contenedor para el mapa y el formulario -->
+      <div id="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12295.777925881565!2d-6.597466!3d37.930156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60b39f8e24b00b%3A0x858e2e8aa68dce8e!2sAracena!5e0!3m2!1ses!2ses!4v1636420185010!5m2!1ses!2ses"
+          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+      <form action="submit_form.php" method="POST" class="reservation-form">
+        <!-- Clase para el formulario -->
+        <h3>Formulario de Reserva</h3>
+        <input type="text" name="name" placeholder="Tu Nombre" required />
+        <input type="email" name="email" placeholder="Tu Correo" required />
+        <textarea name="message" placeholder="Tu Mensaje" required></textarea>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </div>
+  </section>
+  </div>
+
+  <!--Seccion De Pie De Pagina-->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2 class="lang es">Sobre Nosotros</h2>
+        <h2 class="lang en" style="display: none;">About Us</h2>
+        <p class="lang es">Ofrecemos las mejores hamburguesas de la ciudad, elaboradas con ingredientes frescos y
+          locales.</p>
+        <p class="lang en" style="display: none;">We offer the best burgers in town, made with fresh, local ingredients.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h2 class="lang es">Enlaces Rápidos</h2>
+        <h2 class="lang en" style="display: none;">Quick Links</h2>
+        <ul>
+          <li><a href="index.html" class="lang es">Inicio</a><a href="index.html" class="lang en"
+              style="display: none;">Home</a></li>
+          <li><a href="menu.html" class="lang es">Menú</a><a href="menu.html" class="lang en"
+              style="display: none;">Menu</a></li>
+          <li><a href="bebidas.html" class="lang es">Bebidas</a><a href="bebidas.html" class="lang en"
+              style="display: none;">Drinks</a></li>
+          <li><a href="contacto.html" class="lang es">Contacto</a><a href="contacto.html" class="lang en"
+              style="display: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2 class="lang es">Contáctanos</h2>
+        <h2 class="lang en" style="display: none;">Contact Us</h2>
+        <p class="lang es">Email: info@ibericburgers.com</p>
+        <p class="lang en" style="display: none;">Email: info@ibericburgers.com</p>
+        <p class="lang es">Teléfono: 123-456-789</p>
+        <p class="lang en" style="display: none;">Phone: 123-456-789</p>
+        <div class="social">
+          <span class="lang es">Síguenos:</span><span class="lang en" style="display: none;">Follow us:</span>
+          <div class="social-icons">
+            <a href="#"><img src="images/footer/facebook_icon.png" alt="Facebook" /></a>
+            <a href="#"><img src="images/footer/instagram_icon.png" alt="Instagram" /></a>
+            <a href="#"><img src="images/footer/twitter_icon.png" alt="Twitter" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom" class="lang es">
+      <p>&copy; 2024 Iberic Burgers. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+
+</html>
