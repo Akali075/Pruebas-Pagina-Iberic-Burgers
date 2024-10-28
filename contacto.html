@@ -15,28 +15,60 @@
         el.style.display = el.classList.contains(lang) ? "block" : "none";
       });
     }
+    // Nueva función para el botón "volver arriba"
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Mostrar/ocultar el botón "volver arriba" basado en el scroll
+    window.onscroll = function () {
+      const backToTopButton = document.getElementById("back-to-top");
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+      } else {
+        backToTopButton.style.display = "none";
+      }
+    };
+
+    // Ajustar el padding-top del body cuando la página carga
+    window.onload = function () {
+      const header = document.querySelector('header');
+      const headerHeight = header.offsetHeight;
+      document.body.style.paddingTop = headerHeight + 'px';
+    };
   </script>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <img src="images/logo.png" alt="Iberic Burgers Logo" class="logo" />
-      <ul>
-        <li><a href="index.html" class="lang es">Inicio</a><a href="index.html" class="lang en"
-            style="display: none;">Home</a></li>
-        <li><a href="menu.html" class="lang es">Menú</a><a href="menu.html" class="lang en"
-            style="display: none;">Menu</a></li>
-        <li><a href="bebidas.html" class="lang es">Bebidas</a><a href="bebidas.html" class="lang en"
-            style="display: none;">Drinks</a></li>
-        <li><a href="contacto.html" class="lang es">Contacto y Reservas</a><a href="contacto.html" class="lang en"
-            style="display: none;">Contact & Reservations</a></li>
-      </ul>
-    </nav>
-    <div>
+  <header class="sticky-header">
+    <img src="images/logo.png" alt="Iberic Burgers Logo" class="logo" />
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <div class="language-buttons">
       <button onclick="changeLanguage('es')">ES</button>
       <button onclick="changeLanguage('en')">EN</button>
     </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="lang es">Inicio</a>
+          <a href="index.html" class="lang en" style="display: none;">Home</a>
+        </li>
+        <li><a href="menu.html" class="lang es">Menú</a>
+          <a href="menu.html" class="lang en" style="display: none;">Menu</a>
+        </li>
+        <li><a href="bebidas.html" class="lang es">Bebidas</a>
+          <a href="bebidas.html" class="lang en" style="display: none;">Drinks</a>
+        </li>
+        <li><a href="contacto.html" class="lang es">Contacto y Reservas</a>
+          <a href="contacto.html" class="lang en" style="display: none;">Contact & Reservations</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Sección de Contacto y Reservas -->
@@ -54,21 +86,38 @@
       <div id="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12295.777925881565!2d-6.597466!3d37.930156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd60b39f8e24b00b%3A0x858e2e8aa68dce8e!2sAracena!5e0!3m2!1ses!2ses!4v1636420185010!5m2!1ses!2ses"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy">
+          width="900" height="450" style="border: 0" allowfullscreen="" loading="lazy">
         </iframe>
       </div>
 
-      <form action="submit_form.php" method="POST" class="reservation-form">
-        <!-- Clase para el formulario -->
-        <h3>Formulario de Reserva</h3>
-        <input type="text" name="name" placeholder="Tu Nombre" required />
-        <input type="email" name="email" placeholder="Tu Correo" required />
-        <textarea name="message" placeholder="Tu Mensaje" required></textarea>
-        <button type="submit" class="btn">Enviar</button>
-      </form>
-    </div>
+      <div>
+        <form action="submit_form.php" method="POST" class="reservation-form">
+          <h3>Formulario de Reserva</h3>
+          <input type="text" name="name" placeholder="Tu Nombre" required class="form-control" />
+          <input type="email" name="email" placeholder="Tu Correo" required class="form-control" />
+          <input type="number" name="Telefono" placeholder="Tu Numero De Telefono" required class="form-control" />
+
+          <label for="personas">Número de personas:</label>
+          <select name="personas" id="personas" class="form-control" required>
+            <option value="">Selecciona el número de personas</option>
+            <option value="1-2">1-2 personas</option>
+            <option value="3-4">3-4 personas</option>
+            <option value="5+">5 o más personas</option>
+          </select>
+
+          <textarea name="peticion" placeholder="Escribe aquí cualquier petición especial"
+            class="form-control"></textarea>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
   </section>
   </div>
+
+  <!-- Botón volver arriba -->
+  <button id="back-to-top" onclick="scrollToTop()" title="Volver arriba">
+    ↑
+  </button>
 
   <!--Seccion De Pie De Pagina-->
   <footer>
@@ -116,6 +165,32 @@
       <p>&copy; 2024 Iberic Burgers. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function () {
+      const navUl = document.querySelector('nav ul');
+      navUl.classList.toggle('show');
+
+      // Cambiar el ícono del botón
+      this.textContent = navUl.classList.contains('show') ? '✕' : '☰';
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    document.querySelectorAll('nav ul li a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('nav ul').classList.remove('show');
+        document.getElementById('menuToggle').textContent = '☰';
+      });
+    });
+
+    // Cerrar menú al hacer click fuera
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.classList.contains('menu-toggle')) {
+        document.querySelector('nav ul').classList.remove('show');
+        document.getElementById('menuToggle').textContent = '☰';
+      }
+    });
+  </script>
 </body>
 
 </html>

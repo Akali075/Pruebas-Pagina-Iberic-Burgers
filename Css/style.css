@@ -26,6 +26,7 @@ section {
   margin: 20px 0;
 }
 
+/* Estilos base del header y navegación */
 header {
   display: flex;
   justify-content: space-between;
@@ -35,7 +36,6 @@ header {
   color: white;
 }
 
-/* Flex para juntar menú y botones de idioma */
 nav {
   display: flex;
   align-items: center;
@@ -43,14 +43,13 @@ nav {
   width: 100%;
 }
 
-/* Logo alineado a la izquierda */
 .logo {
   width: 100px;
   height: auto;
   margin-right: auto;
 }
 
-/* Menú de navegación horizontal */
+/* Menú de navegación */
 nav ul {
   display: flex;
   list-style: none;
@@ -60,7 +59,6 @@ nav ul {
 
 nav ul li {
   margin-left: 20px;
-  display: inline-block;
 }
 
 nav ul li a {
@@ -68,8 +66,6 @@ nav ul li a {
   color: white;
   font-size: 15px;
   font-weight: 600;
-  border-bottom: 2px solid transparent;
-  transition: 0.4s;
   padding: 8px 12px;
 }
 
@@ -92,6 +88,17 @@ header div button {
 
 header div button:hover {
   background-color: #777;
+}
+
+/* Botón hamburguesa - oculto por defecto */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
 }
 
 /* Efectos de hover en el menú */
@@ -456,4 +463,186 @@ footer {
 
 .footer-bottom p {
   margin: 0;
+}
+
+/* Estilos para el header fijo */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Ajuste para el contenido debajo del header fijo */
+#content {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+/* Estilos para el botón volver arriba */
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #e67e22;
+  color: white;
+  cursor: pointer;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background-color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#back-to-top:hover {
+  background-color: #d35400;
+}
+
+/* Estilos existentes se mantienen igual hasta los media queries */
+
+/* Media Queries para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  /* Ajustes del header y navegación */
+  header {
+    padding: 5px 10px;
+  }
+
+  .logo {
+    width: 70px; /* Logo más pequeño en móvil */
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none; /* Por defecto oculto en móvil */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #444;
+  }
+
+  /* Botón de menú hamburguesa */
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  /* Ajustes de los botones principales */
+  .button-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  .main-btn {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 18px;
+    text-align: center;
+    display: block;
+  }
+
+  /* Ajustes de la galería de imágenes */
+  .image-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-column {
+    width: 90%;
+    max-width: none;
+    margin: 10px 0;
+  }
+
+  /* Ajustes del texto */
+  h2 {
+    font-size: 32px;
+    padding: 0 15px;
+  }
+
+  #hero h2 {
+    font-size: 36px;
+  }
+
+  #hero p {
+    font-size: 18px;
+    padding: 0 20px;
+  }
+
+  /* Ajustes del footer */
+  .footer-container {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .footer-section {
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .footer-section h2 {
+    font-size: 24px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* Ajustes del botón volver arriba */
+  #back-to-top {
+    padding: 12px 16px;
+    font-size: 18px;
+    bottom: 25px;
+    right: 25px;
+  }
+}
+
+/* Media query para dispositivos muy pequeños */
+@media screen and (max-width: 480px) {
+  .main-btn {
+    font-size: 16px;
+    padding: 12px 16px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  #hero h2 {
+    font-size: 32px;
+  }
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  .image-column {
+    width: 95%;
+  }
 }

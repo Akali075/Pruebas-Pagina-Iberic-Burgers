@@ -1,34 +1,42 @@
 #contact {
-    padding: 20px;
-  }
-  
-  #contact form {
-    margin-top: 20px;
-  }
-  
-  #contact input, #contact textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-  }
-  
-  #contact button[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #contact button[type="submit"]:hover {
-    background-color: #555;
-  }
-  
-  #map {
-    width: 100%;
-    height: 300px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
-  }
+  padding: 20px;
+}
+
+#contact form {
+  margin-top: 20px;
+}
+
+#contact input, #contact textarea, #contact select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Añadir bordes redondeados */
+}
+
+#contact button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el mouse */
+}
+
+#contact button[type="submit"]:hover {
+  background-color: #555;
+}
+
+.confirmation-message {
+  color: green; /* Color verde para el mensaje de confirmación */
+  margin-top: 20px;
+  font-weight: bold; /* Negrita para destacar el mensaje */
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
